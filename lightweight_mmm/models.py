@@ -248,7 +248,7 @@ def transform_carryover(media_data: jnp.ndarray,
     The transformed media data.
   """
   # Override the lags
-  number_lags = 10
+  number_lags = 13
   print(f"Test number of lags: {number_lags}")
                           
   transform_default_priors = _get_transform_default_priors()["carryover"]
