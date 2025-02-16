@@ -247,6 +247,10 @@ def transform_carryover(media_data: jnp.ndarray,
   Returns:
     The transformed media data.
   """
+  # Override the lags
+  number_lags = 4
+  print(f"Test number of lags: {number_lags}")
+                          
   transform_default_priors = _get_transform_default_priors()["carryover"]
   with numpyro.plate(name=f"{_AD_EFFECT_RETENTION_RATE}_plate",
                      size=media_data.shape[1]):
