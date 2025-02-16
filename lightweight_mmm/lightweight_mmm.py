@@ -669,4 +669,7 @@ class LightweightMMM:
     # -> roi_hat shape (sample, channel, geo)
     roi_hat = sum_unscaled_prediction * media_contribution_hat / unscaled_costs
 
+    # Check this is from the fork
+    print("FORK CHECK")
+
     return media_contribution_hat, roi_hat
