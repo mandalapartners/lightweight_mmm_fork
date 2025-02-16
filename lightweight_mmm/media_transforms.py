@@ -159,10 +159,6 @@ def carryover(data: jnp.ndarray,
   lags_arange = jnp.expand_dims(jnp.arange(number_lags, dtype=jnp.float32),
                                 axis=-1)
   convolve_func = _carryover_convolve
-  
-  # Added: Output the number of lags  
-  print(f"Check, number of lags: {number_lags}")
-                
   if data.ndim == 3:
     # Since _carryover_convolve is already vmaped in the decorator we only need
     # to vmap it once here to handle the geo level data. We keep the windows bi
