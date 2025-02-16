@@ -232,7 +232,7 @@ def transform_hill_adstock(media_data: jnp.ndarray,
 # Change the number of lags to 4 from 13
 def transform_carryover(media_data: jnp.ndarray,
                         custom_priors: MutableMapping[str, Prior],
-                        number_lags: int = 4) -> jnp.ndarray:
+                        number_lags: int = 7) -> jnp.ndarray:
   """Transforms the input data with the carryover function and exponent.
 
   Args:
@@ -248,7 +248,7 @@ def transform_carryover(media_data: jnp.ndarray,
     The transformed media data.
   """
   # Override the lags
-  number_lags = 4
+  number_lags = 7
   print(f"Test number of lags: {number_lags}")
                           
   transform_default_priors = _get_transform_default_priors()["carryover"]
