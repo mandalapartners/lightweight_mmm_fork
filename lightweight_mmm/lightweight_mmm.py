@@ -50,9 +50,9 @@ import numpyro
 from numpyro import distributions as dist
 from numpyro import infer
 
-from lightweight_mmm import models
-from lightweight_mmm import preprocessing
-from lightweight_mmm import utils
+from lightweight_mmm_fork.lightweight_mmm import models
+from lightweight_mmm_fork.lightweight_mmm import preprocessing
+from lightweight_mmm_fork.lightweight_mmm import utils
 
 Prior = Union[
     dist.Distribution,
