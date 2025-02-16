@@ -139,7 +139,7 @@ def carryover(data: jnp.ndarray,
               peak_effect_delay: jnp.ndarray,
 
               # Changed this for testing from 12 to custom number (12 -> 13)
-              number_lags: int = 13) -> jnp.ndarray:
+              number_lags: int = 4) -> jnp.ndarray:
   """Calculates media carryover.
 
   More details about this function can be found in:
