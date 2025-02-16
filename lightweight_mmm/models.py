@@ -229,10 +229,10 @@ def transform_hill_adstock(media_data: jnp.ndarray,
       half_max_effective_concentration=half_max_effective_concentration,
       slope=slope)
 
-
+# Change the number of lags to 4 from 13
 def transform_carryover(media_data: jnp.ndarray,
                         custom_priors: MutableMapping[str, Prior],
-                        number_lags: int = 13) -> jnp.ndarray:
+                        number_lags: int = 4) -> jnp.ndarray:
   """Transforms the input data with the carryover function and exponent.
 
   Args:
