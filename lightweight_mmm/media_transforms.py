@@ -138,8 +138,8 @@ def carryover(data: jnp.ndarray,
               ad_effect_retention_rate: jnp.ndarray,
               peak_effect_delay: jnp.ndarray,
 
-              # Changed this for testing from 12 to 9
-              number_lags: int = 10) -> jnp.ndarray:
+              # Changed this for testing from 12 to custom number (12 -> 13)
+              number_lags: int = 13) -> jnp.ndarray:
   """Calculates media carryover.
 
   More details about this function can be found in:
@@ -161,6 +161,10 @@ def carryover(data: jnp.ndarray,
   lags_arange = jnp.expand_dims(jnp.arange(number_lags, dtype=jnp.float32),
                                 axis=-1)
   convolve_func = _carryover_convolve
+  
+  # Added: Output the number of lags  
+  print(f"Check, number of lags: {number_lags}")
+                
   if data.ndim == 3:
     # Since _carryover_convolve is already vmaped in the decorator we only need
     # to vmap it once here to handle the geo level data. We keep the windows bi
