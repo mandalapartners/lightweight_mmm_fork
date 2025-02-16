@@ -137,9 +137,7 @@ def _carryover_convolve(data: jnp.ndarray,
 def carryover(data: jnp.ndarray,
               ad_effect_retention_rate: jnp.ndarray,
               peak_effect_delay: jnp.ndarray,
-
-              # Changed this for testing from 12 to custom number (12 -> 13)
-              number_lags: int = 4) -> jnp.ndarray:
+              number_lags: int) -> jnp.ndarray:
   """Calculates media carryover.
 
   More details about this function can be found in:
