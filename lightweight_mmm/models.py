@@ -35,7 +35,7 @@ import jax.numpy as jnp
 import numpyro
 from numpyro import distributions as dist
 
-from lightweight_mmm import media_transforms
+from lightweight_mmm_fork.lightweight_mmm import media_transforms
 
 Prior = Union[
     dist.Distribution,
